@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/calculadora.css">
+</head>
+
+<body>
+
+    <div class="container" id="divCalculadora">
+        <input type="text" id="visor" class="col-md-12" disabled>
+
+        <div id="botoes">
+            <button class="btn btn-secondary" type="button" onclick="">
+
+            </button>
+            <button class="btn btn-secondary" type="button" 
+            onclick="btnPotencia()">
+                x<sup>2</sup>
+            </button>
+            <button class="btn btn-secondary" type="button" 
+            onclick="btnRaiz()">
+                √
+            </button>
+            <button class="btn btn-secondary" type="button" 
+            onclick="btnApaga()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                    <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z" />
+                    <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z" />
+                </svg>
+            </button>
+            <!---------------------------------------------->
+            <button class="btn btn-secondary" type="button" onclick="btnC()">
+                C
+            </button>
+            <button class="btn btn-outline-warning" type="button" onclick="btnCE()">
+                CE
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btnPorcento()">
+                %
+            </button>
+            <button id="divisao" class="btn btn-secondary operador" type="button" onclick="btnOp('/')">
+                ÷
+            </button>
+            <!---------------------------------------------->
+            <button class="btn btn-secondary" type="button" onclick="btn('7')">
+                7
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btn('8')">
+                8
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btn('9')">
+                9
+            </button>
+            <button id="multiplicacao" class="btn btn-secondary operador" type="button" onclick="btnOp('*')">
+                X
+            </button>
+            <!---------------------------------------------->
+            <button class="btn btn-secondary" type="button" onclick="btn('4')">
+                4
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btn('5')">
+                5
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btn('6')">
+                6
+            </button>
+            <button id="subtracao" class="btn btn-secondary operador" type="button" onclick="btnOp('-')">
+                -
+            </button>
+            <!---------------------------------------------->
+            <button class="btn btn-secondary" type="button" onclick="btn('1')">
+                1
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btn('2')">
+                2
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btn('3')">
+                3
+            </button>
+            <button id="adicao" class="btn btn-secondary operador" type="button" onclick="btnOp('+')">
+                +
+            </button>
+            <!---------------------------------------------->
+            <button class="btn btn-secondary" type="button" onclick="inverteSinal()">
+                ±
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btn('0')">
+                0
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btnVirgula()">
+                ,
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="btnIgual()">
+                =
+            </button>
+        </div>
+    </div>
+    <div class="container" id="painel">
+        <div id="historico"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="./js/calculadora.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
